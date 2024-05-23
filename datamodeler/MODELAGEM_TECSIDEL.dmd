@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MODELAGEM_TECSIDEL" id="FF17E96B-646C-FD59-0C4D-43AB1294D58A" version="3.5">
+<createdBy>FIAP</createdBy>
+<createdTime>2024-05-21 18:33:21 UTC</createdTime>
+<ownerDesignName>MODELAGEM_TECSIDEL</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>FF17E96B-646C-FD59-0C4D-43AB1294D58A</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="26AFE2B5-94E5-1899-B96B-084A71CC961D">
+<designStoragePath>C:\SQL</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>
