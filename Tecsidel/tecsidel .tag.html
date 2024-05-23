@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monitoramento Tags</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #121212;
+            color: #fff;
+        }
+        .left-column, .right-column {
+            background-color: #2c2c2c; /* Cor de fundo escura */
+            padding: 20px;
+            gap: 20px;
+            justify-content: center; 
+            align-content: center;
+            margin-bottom: 20px;  
+        }
+        .camera-window {
+            background-color: #1f1f1f;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .table {
+            color: #fff;
+        }
+        iframe {
+            border: 1px solid #dee2e6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/Tecsidel/indexclaro.html#">Tecsidel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/Tecsidel/indexclaro.html#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configurações</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dispositivos de Monitoramento
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/tecsidel.Veiculos.html">Veículos</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/Tecsidel.c%C3%A2mera.html#">Câmeras</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/Tecsidel.antena.html">Antenas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sugestões</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h1 class="text-center">Monitoramento TAGs</h1>
+    <!-- Layout de Conteúdo -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Coluna Esquerda -->
+            <div class="col-md-6 left-column">
+                <div class="camera-window">
+                    <h2 class="text-center">Veículos com tags Cadastradas</h2>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Veículo</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Caminhão</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>Carro de Passeio</td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>Moto</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Ambulância</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Viatura da Polícia</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Ônibus</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Caminhão de Bombeiros</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Veículo de Manutenção</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>Carro-forte</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Reboque</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Coluna Direita -->
+            <div class="col-md-6 right-column">
+                <div class="camera-window">
+                    <h2 class="text-center">Veículos sem Tags cadastradas</h2>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tipo de Veículo</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Caminhão</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Carro de Passeio</td>
+                                <td>60</td>
+                            </tr>
+                            <tr>
+                                <td>Moto</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>Ambulância</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Viatura da Polícia</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Ônibus</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Caminhão de Bombeiros</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Veículo de Manutenção</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Carro-forte</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Reboque</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-center">Pedágio Monitorado</h1>
+        <!-- Localização do pedágio a ser monitorado -->
+        <div class="row">
+            <div class="camera-window d-flex justify-content-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234158.97472845804!2d-47.14394971328128!3d-23.506089399999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5db1f80e5ba7%3A0x357224f2de658cb9!2sCCR%20ViaOeste!5e0!3m2!1spt-BR!2sbr!4v1716054128825!5m2!1spt-BR!2sbr" width="95%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

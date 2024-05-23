@@ -1,0 +1,87 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    width: 50%;
+    max-width: 540px;
+    height: auto;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+h1, h2 {
+    margin: 0 .5rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-pink);
+}
+.box-form {
+    margin: .5rem
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    margin: .5rem 0;
+}
+.form-label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+.form-control {
+    width: 100%;
+    border: 0;
+    background-color: var(--color-light);
+    height: 3.5rem;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 1.1rem;
+}
+.form-btn {
+    width: 100%;
+    margin: 0.8rem 0;
+    border: 0;
+    background-color: rgb(16, 14, 180); ;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.2rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+body {
+    
+
+    background-image: url('Tecsidel\ Imagens/road-2683741.jpg'); 
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background:#fff  ;
+    text-align: center;
+    padding: 10px 0;
+    position:static;
+    bottom: 0;
+    width: 0%;
+    filter: opacity(70%);
+}
+
+.dark-mode {
+    background-image: url('Tecsidel\ Imagens/milky-way-2948284.jpg'); /* Substitua 'caminho_para_sua_imagem.jpg' pelo caminho real do seu arquivo de imagem */
+    background-size: cover;  /* Cobrir toda a área disponível */
+    background-position: center;  /* Centralizar imagem no fundo */
+    background-repeat: no-repeat;  /* Não repetir a imagem */
+    height: vh;
+    
+}

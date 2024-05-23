@@ -1,0 +1,39 @@
+
+.left-column {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    padding: 20px;
+    gap: 20px;
+    justify-content: center; 
+    align-content: center;    
+
+}
+.right-column {
+    background-color: #e9ecef; /* Cor de fundo mais escura */
+    padding: 20px;
+}
+.camera-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.camera-window {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 150px; /* Altura fixa para exemplo */
+}
+
+
+        body {
+            padding: 20px;
+        }
+        .table-container {
+            max-width: 600px;
+            margin: auto;
+        }
+    
+
+
+
+
+

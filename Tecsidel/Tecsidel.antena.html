@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monitoramento Antenas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #121212;
+            color: #fff;
+        }
+        .left-column, .right-column {
+            background-color: #2c2c2c; /* Cor de fundo escura */
+            padding: 20px;
+            gap: 20px;
+            justify-content: center; 
+            align-content: center;
+            margin-bottom: 20px;  
+        }
+        .camera-window {
+            background-color: #1f1f1f;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .table {
+            color: #fff;
+        }
+        iframe {
+            border: 1px solid #dee2e6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/Tecsidel/indexclaro.html#">Tecsidel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/Tecsidel/indexclaro.html#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configurações</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dispositivos de Monitoramento
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/tecsidel.Veiculos.html">Veículos</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/Tecsidel.c%C3%A2mera.html#">Câmeras</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/tecsidel%20.tag.html">Tags</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sugestões</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center">Monitoramento Antenas</h1>
+    <!-- Layout de Conteúdo -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Coluna Esquerda -->
+            <div class="col-md-12">
+                <div class="camera-window">
+                    <h2 class="text-center">Características da Antena</h2>
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Característica</th>
+                                <th scope="col">Detalhes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Data da Última Manutenção</th>
+                                <td>2024-04-15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Localização da Antena</th>
+                                <td>Coordenadas GPS (23.5505° S, 46.6333° W) ou Km 25 da Rodovia SP-280</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Código da Antena</th>
+                                <td>ANT-12345</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Modelo</th>
+                                <td>ACME-ANT2024</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ano de Fabricação</th>
+                                <td>2020</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Quantidade de Vezes que Apresentou Problemas</th>
+                                <td>3 vezes</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Quantidade de Veículos com Tags Detectadas</th>
+                                <td>5000 veículos</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Status Operacional</th>
+                                <td>Operacional</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Fabricante</th>
+                                <td>ACME Corp.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Data da Instalação</th>
+                                <td>2021-05-20</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipo de Antena</th>
+                                <td>UHF RFID</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Frequência de Operação</th>
+                                <td>860-960 MHz</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Alcance de Leitura</th>
+                                <td>Até 10 metros</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Potência de Transmissão</th>
+                                <td>30 dBm</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Responsável pela Manutenção</th>
+                                <td>João Silva</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Contato para Suporte Técnico</th>
+                                <td>suporte@acme.com / (11) 1234-5678</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Última Atualização de Firmware</th>
+                                <td>2023-11-10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Histórico de Manutenção</th>
+                                <td>Registros de todas as manutenções realizadas, incluindo datas e tipos de intervenção</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Observações</th>
+                                <td>Antena localizada em área de alta interferência eletromagnética</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-center">Pedágio Monitorado</h1>
+        <!-- Localização do pedágio a ser monitorado -->
+        <div class="row">
+            <div class="camera-window d-flex justify-content-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234158.97472845804!2d-47.14394971328128!3d-23.506089399999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5db1f80e5ba7%3A0x357224f2de658cb9!2sCCR%20ViaOeste!5e0!3m2!1spt-BR!2sbr!4v1716054128825!5m2!1spt-BR!2sbr" width="95%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

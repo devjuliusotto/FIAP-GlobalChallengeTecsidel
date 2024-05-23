@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monitoramento Veículos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #000000;
+        }
+
+        .navbar-brand, .nav-link, .navbar-toggler-icon, .btn, footer p {
+            color: #ffffff;
+        }
+
+        .camera-window {
+            margin-bottom: 20px;
+            background-color: rgba(143, 139, 139, 0.205);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .table {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .table th, .table td {
+            color: #fff;
+        }
+
+        .table-dark {
+            background-color: #333333;
+        }
+
+        .btn-outline-black {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .btn-outline-black:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #000000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/Tecsidel/indexclaro.html#">Tecsidel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/Tecsidel/indexclaro.html#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Configurações</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dispositivos de Monitoramento
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- já está na página de Veículos -->
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/Tecsidel.c%C3%A2mera.html#">Câmeras</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/Tecsidel.antena.html">Antenas</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:5500/Tecsidel/tecsidel%20.tag.html">Tags</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Localização do Pedágio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sugestões</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar Placas" aria-label="Search">
+                    <button class="btn btn-outline-black" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center">Monitoramento Veículos</h1>
+    <!-- Layout de Conteúdo -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Coluna Esquerda -->
+            <div class="col-md-12">
+                <div class="camera-window">
+                    <h2 class="text-center">Dados do Veículo no Pedágio</h2>
+                    <div class="table-container">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Parâmetro</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tipo de Veículo</td>
+                                    <td>Carro de passeio, caminhão, moto, ambulância, viatura da polícia</td>
+                                </tr>
+                                <tr>
+                                    <td>Tamanho do Veículo</td>
+                                    <td>Pequeno, médio, grande</td>
+                                </tr>
+                                <tr>
+                                    <td>Possui Tag de Pagamento</td>
+                                    <td>Sim ou Não</td>
+                                </tr>
+                                <tr>
+                                    <td>Quilômetros Rodados pela Via</td>
+                                    <td>50 km, 120 km</td>
+                                </tr>
+                                <tr>
+                                    <td>Valor da Tarifa a Ser Paga</td>
+                                    <td>R$ 12,50, R$ 18,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Veículo Consta no Banco de Dados de Veículos Roubados da Polícia</td>
+                                    <td>Sim ou Não</td>
+                                </tr>
+                                <tr>
+                                    <td>Possui Desconto na Tarifa</td>
+                                    <td>Sim ou Não</td>
+                                </tr>
+                                <tr>
+                                    <td>Categoria do Veículo</td>
+                                    <td>Categoria 1, Categoria 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Placa do Veículo</td>
+                                    <td>ABC-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>Modelo e Ano do Veículo</td>
+                                    <td>Fiat Uno 2015</td>
+                                </tr>
+                                <tr>
+                                    <td>Fabricante do Veículo</td>
+                                    <td>Fiat, Ford, Honda</td>
+                                </tr>
+                                <tr>
+                                    <td>Cor do Veículo</td>
+                                    <td>Branco, Preto, Vermelho</td>
+                                </tr>
+                                <tr>
+                                    <td>Data e Hora de Passagem pelo Pedágio</td>
+                                    <td>20/05/2024 14:30</td>
+                                </tr>
+                                <tr>
+                                    <td>Estado de Origem do Veículo</td>
+                                    <td>São Paulo, Rio de Janeiro</td>
+                                </tr>
+                                <tr>
+                                    <td>Veículo de Carga ou Passageiro</td>
+                                    <td>Carga, Passageiro</td>
+                                </tr>
+                                <tr>
+                                    <td>Registro em Nome de Pessoa Física ou Jurídica</td>
+                                    <td>Pessoa Física, Pessoa Jurídica</td>
+                                </tr>
+                                <tr>
+                                    <td>Multas Pendentes</td>
+                                    <td>Sim ou Não</td>
+                                </tr>
+                                <tr>
+                                    <td>Licenciamento em Dia</td>
+                                    <td>Sim ou Não</td>
+                                </tr>
+                                <tr>
+                                    <td>Possui Isenção de Tarifa</td>
+                                    <td>Sim ou Não</td>
+                                </tr>
+                                <tr>
+                                    <td>Registro de Passagens Anteriores pelo Pedágio</td>
+                                    <td>Sim ou Não, detalhes das passagens</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-center">Pedágio Monitorado</h1>
+        <!-- Localização do pedágio a ser monitorado -->
+        <div class="row">
+            <div class="camera-window d-flex justify-content-center border-black">
+                <iframe width="80%" height="315" src="https://www.youtube.com/embed/6dp-bvQ7RWo?si=480RcZ1zOgCyE0VR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        <p>&copy; 2024 Monitoramento online</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
